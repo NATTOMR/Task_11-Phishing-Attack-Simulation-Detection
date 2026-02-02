@@ -25,6 +25,55 @@ This project demonstrates a **controlled phishing attack simulation** conducted 
 ### Primary Tool
 - **GoPhish** – Open-source phishing simulation framework
 
+- # 🛠️ Install GoPhish on Kali Linux (Step by Step)
+
+> ⚠️ **Warning**  
+> Use GoPhish **ONLY** in a lab or authorized environment for security awareness and training.
+
+---
+
+## ✅ Step 1: Update Kali Linux
+
+Open a terminal and run:
+
+``bash
+sudo apt update && sudo apt upgrade -y
+🧠 Step 2: Check System Architecture
+GoPhish depends on your CPU architecture.
+
+uname -m
+Expected Output
+✅ x86_64 → Supported
+
+❌ aarch64 (ARM) → Use a VM with x86_64
+
+📁 Step 3: Move to /opt Directory
+This is the standard location for third-party security tools.
+
+cd /opt
+📥 Step 4: Download GoPhish
+Download the latest Linux 64-bit release:
+
+sudo wget https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip
+📦 Step 5: Extract GoPhish
+sudo unzip gophish-v0.12.1-linux-64bit.zip
+Enter the GoPhish directory:
+
+cd gophish
+🔑 Step 6: Make GoPhish Executable
+sudo chmod +x gophish
+⚙️ Step 7: Configure GoPhish (Recommended)
+Edit the configuration file:
+
+sudo nano config.json
+🔧 Change Admin Interface to Localhost
+Find:
+
+"listen_url": "0.0.0.0:3333"
+Change it to:
+
+"listen_url": "127.0.0.1:3333"
+
 ### Alternatives
 - Manual phishing email templates (HTML)
 - Static landing page (HTML/CSS)
