@@ -76,7 +76,7 @@ Find:
 Change it to:
 
 - "listen_url": "127.0.0.1:3333"
-
+![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/GoPhish%20Dashboard.png)
 # After open the Gophish to lanche a phishing attack(lab environment)
 
 ## 🔹 STEP 1: Create a NEW Email Template
