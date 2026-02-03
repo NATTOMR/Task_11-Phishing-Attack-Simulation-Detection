@@ -103,7 +103,7 @@ Change it to:
 
 4. Text Tab →
 
-``Hello {{.FirstName}},
+Hello {{.FirstName}},
 
 We received a request to reset your account password.
 
@@ -119,7 +119,7 @@ This email is part of a security awareness exercise.``
    
 <html>
   <body style="font-family: Arial;">
-    <h2>Password Reset Notice</h2>
+    <h6>Password Reset Notice</h6>
       <p>Hello {{.FirstName}},</p> 
     <p> A password reset request was initiated for your account. </p>
     <p>
