@@ -74,10 +74,149 @@ Change it to:
 
 "listen_url": "127.0.0.1:3333"
 
-### Alternatives
-- Manual phishing email templates (HTML)
-- Static landing page (HTML/CSS)
+🔹 STEP 1: Create a NEW Email Template
 
+Go to Email Templates
+
+Click + New Template
+
+Fill like this:
+
+Name
+
+Password Reset Simulation – Test 2
+
+
+Envelope Sender
+
+IT Support <it-support@lab.local>
+
+
+Subject
+
+Password Reset Required
+
+Text Tab → paste this:
+Hello {{.FirstName}},
+
+We received a request to reset your account password.
+
+If this was you, please confirm using the link below:
+{{.URL}}
+
+If you did not request this, please review immediately.
+
+This email is part of a security awareness exercise.
+
+HTML Tab → paste this:
+<html>
+  <body style="font-family: Arial;">
+    <h2>Password Reset Notice</h2>
+
+    <p>Hello {{.FirstName}},</p>
+
+    <p>
+      A password reset request was initiated for your account.
+    </p>
+
+    <p>
+      <a href="{{.URL}}"
+         style="background:#2980b9;color:white;
+                padding:10px 16px;text-decoration:none;
+                border-radius:4px;">
+        Confirm Reset
+      </a>
+    </p>
+
+    <p style="font-size:12px;color:gray;">
+      This is a cybersecurity awareness simulation.
+    </p>
+  </body>
+</html>
+
+
+✅ Leave Add Tracking Image ON
+👉 Click Save Template
+
+🔹 STEP 2: Create a NEW Landing Page
+
+Go to Landing Pages
+
+Click + New Page
+
+Name
+Password Reset Awareness – Test 2
+
+Paste this HTML:
+<html>
+  <body style="font-family: Arial; text-align:center; margin-top:80px;">
+    <h2>Password Reset Simulation</h2>
+
+    <p>
+      This was a simulated phishing email.
+    </p>
+
+    <p>
+      Real attackers often use fake password reset messages
+      to steal credentials.
+    </p>
+
+    <p style="color:green;">
+      Always verify reset requests before clicking links.
+    </p>
+  </body>
+</html>
+
+
+❌ DO NOT check “Capture Submitted Data”
+👉 Click Save Page
+
+🔹 STEP 3: Create a NEW Campaign
+
+Go to Campaigns
+
+Click + New Campaign
+
+Fill like this:
+
+Name
+
+Password Reset Test – Feb 2026
+
+
+Email Template
+
+Password Reset Simulation – Test 2
+
+
+Landing Page
+
+Password Reset Awareness – Test 2
+
+
+URL
+
+http://127.0.0.1
+
+
+Sending Profile
+
+MailHog Lab
+
+
+Groups
+
+Security Awareness Lab – Feb 2026
+
+🔹 STEP 4: Launch 🚀
+
+Click Launch Campaign
+
+Confirm Launch
+
+🔹 STEP 5: Watch Results
+Open MailHog
+http://127.0.0.1:8025
 ### Supporting Tools
 - Visual Studio Code
 - Web browser
