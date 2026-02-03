@@ -170,6 +170,38 @@ This email is part of a security awareness exercise.``
 - ❌ DO NOT check “Capture Submitted Data”
 - 👉 Click Save Page
 
+  ## Sending Profile (MailHog)
+  🔸 Name
+`MailHog Lab`
+
+🔸 Interface Type
+`SMTP`
+
+🔸 SMTP From
+`alerts@bank-lab.local`
+
+
+- (Simple email only — no display name)
+
+🔸 Host 🚨 MOST IMPORTANT
+`127.0.0.1:1025`
+
+🔸 Username
+`(leave empty)`
+
+🔸 Password
+`(leave empty)`
+
+🔸 Ignore Certificate Errors
+
+✅ Checked
+
+
+🔹 STEP 3: Save the Profile
+
+- Click:
+- 👉 Save Profile
+
 ## 🔹 STEP 3: Create a NEW Campaign
 
 - Go to Campaigns
