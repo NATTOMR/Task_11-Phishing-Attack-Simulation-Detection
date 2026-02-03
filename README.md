@@ -245,7 +245,7 @@ MailHog Lab
 - Click Launch Campaign
 
 - Confirm Launch
-
+![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/Campaign.jpeg)
 ## 🔹 STEP 5: Watch Results
 - Open MailHog
 - http://127.0.0.1:8025
