@@ -169,7 +169,7 @@ This email is part of a security awareness exercise.``
 
 - ❌ DO NOT check “Capture Submitted Data”
 - 👉 Click Save Page
-
+![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/GoPhish%20Landing-Pages.jpeg.png)
   ## Sending Profile (MailHog)
   🔸 Name
 `MailHog Lab`
