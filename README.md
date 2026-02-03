@@ -39,9 +39,9 @@ Open a terminal and run:
 
 ## 🧠 Step 2: Check System Architecture
 GoPhish depends on your CPU architecture.
-
 `uname -m`
- > Expected Output
+
+ ### Expected Output
 
 - ✅ x86_64 → Supported
 
@@ -79,7 +79,7 @@ Change it to:
 
 # After open the Gophish to lanche a phishing attack(lab environment)
 
-##🔹 STEP 1: Create a NEW Email Template
+## 🔹 STEP 1: Create a NEW Email Template
 
 - Go to Email Templates
 
@@ -137,32 +137,29 @@ This email is part of a security awareness exercise.``
 </html>
 
 
-✅ Leave Add Tracking Image ON
-👉 Click Save Template
+## ✅ Leave Add Tracking Image ON
+ 👉 Click Save Template
 
-🔹 STEP 2: Create a NEW Landing Page
+## 🔹 STEP 2: Create a NEW Landing Page
 
-Go to Landing Pages
+- Go to Landing Pages
 
-Click + New Page
+- Click + New Page
 
-Name
-Password Reset Awareness – Test 2
+- Name
+`Password Reset Awareness – Test 2`
 
-Paste this HTML:
+- Paste this HTML:
 <html>
   <body style="font-family: Arial; text-align:center; margin-top:80px;">
     <h2>Password Reset Simulation</h2>
-
     <p>
       This was a simulated phishing email.
     </p>
-
     <p>
       Real attackers often use fake password reset messages
       to steal credentials.
     </p>
-
     <p style="color:green;">
       Always verify reset requests before clicking links.
     </p>
@@ -170,55 +167,57 @@ Paste this HTML:
 </html>
 
 
-❌ DO NOT check “Capture Submitted Data”
-👉 Click Save Page
+- ❌ DO NOT check “Capture Submitted Data”
+- 👉 Click Save Page
 
-🔹 STEP 3: Create a NEW Campaign
+## 🔹 STEP 3: Create a NEW Campaign
 
-Go to Campaigns
+- Go to Campaigns
 
-Click + New Campaign
+- Click + New Campaign
 
-Fill like this:
+### Fill like this:
 
-Name
+- Name
 
-Password Reset Test – Feb 2026
-
-
-Email Template
-
-Password Reset Simulation – Test 2
+`Password Reset Test – Feb 2026`
 
 
-Landing Page
+- Email Template
 
-Password Reset Awareness – Test 2
-
-
-URL
-
-http://127.0.0.1
+`Password Reset Simulation – Test 2`
 
 
-Sending Profile
+- Landing Page
+
+`Password Reset Awareness – Test 2`
+
+
+- URL
+
+`http://127.0.0.1`
+
+
+- Sending Profile
 
 MailHog Lab
 
 
-Groups
+## Groups
 
-Security Awareness Lab – Feb 2026
+`Security Awareness Lab – Feb 2026`
 
-🔹 STEP 4: Launch 🚀
+## 🔹 STEP 4: Launch 🚀
 
-Click Launch Campaign
+- Click Launch Campaign
 
-Confirm Launch
+- Confirm Launch
 
-🔹 STEP 5: Watch Results
-Open MailHog
-http://127.0.0.1:8025
+## 🔹 STEP 5: Watch Results
+- Open MailHog
+- http://127.0.0.1:8025
+
+  
 ### Supporting Tools
 - Visual Studio Code
 - Web browser
