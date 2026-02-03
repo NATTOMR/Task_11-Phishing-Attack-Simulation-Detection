@@ -37,67 +37,75 @@ This project demonstrates a **controlled phishing attack simulation** conducted 
 Open a terminal and run:
 
 ``bash
-sudo apt update && sudo apt upgrade -y
-🧠 Step 2: Check System Architecture
+`sudo apt update && sudo apt upgrade -y`
+
+## 🧠 Step 2: Check System Architecture
 GoPhish depends on your CPU architecture.
 
-uname -m
-Expected Output
-✅ x86_64 → Supported
+`uname -m`
+ Expected Output
 
-❌ aarch64 (ARM) → Use a VM with x86_64
+- ✅ x86_64 → Supported
 
-📁 Step 3: Move to /opt Directory
+- ❌ aarch64 (ARM) → Use a VM with x86_64
+
+## 📁 Step 3: Move to /opt Directory
 This is the standard location for third-party security tools.
+`cd /opt`
 
-cd /opt
-📥 Step 4: Download GoPhish
+## 📥 Step 4: Download GoPhish
 Download the latest Linux 64-bit release:
 
-sudo wget https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip
-📦 Step 5: Extract GoPhish
-sudo unzip gophish-v0.12.1-linux-64bit.zip
+`sudo wget https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip`
+
+## 📦 Step 5: Extract GoPhish
+`sudo unzip gophish-v0.12.1-linux-64bit.zip`
+
 Enter the GoPhish directory:
+`cd gophish`
 
-cd gophish
-🔑 Step 6: Make GoPhish Executable
-sudo chmod +x gophish
-⚙️ Step 7: Configure GoPhish (Recommended)
+## 🔑 Step 6: Make GoPhish Executable
+`sudo chmod +x gophish`
+
+## ⚙️ Step 7: Configure GoPhish (Recommended)
 Edit the configuration file:
+`sudo nano config.json`
 
-sudo nano config.json
-🔧 Change Admin Interface to Localhost
+##🔧 Change Admin Interface to Localhost
 Find:
 
-"listen_url": "0.0.0.0:3333"
+-"listen_url": "0.0.0.0:3333"
 Change it to:
 
-"listen_url": "127.0.0.1:3333"
+-"listen_url": "127.0.0.1:3333"
 
-🔹 STEP 1: Create a NEW Email Template
+# After open the Gophish to lanche a phishing attack(lab environment)
 
-Go to Email Templates
+##🔹 STEP 1: Create a NEW Email Template
 
-Click + New Template
+- Go to Email Templates
 
-Fill like this:
+- Click + New Template
 
-Name
+- Fill like this:
 
-Password Reset Simulation – Test 2
+1. Name -
 
-
-Envelope Sender
-
-IT Support <it-support@lab.local>
+`Password Reset Simulation – Test 2`
 
 
-Subject
+2. Envelope Sender
 
-Password Reset Required
+`IT Support <it-support@lab.local>`
 
-Text Tab → paste this:
-Hello {{.FirstName}},
+
+3. Subject
+
+`Password Reset Required`
+
+4. Text Tab →
+
+``Hello {{.FirstName}},
 
 We received a request to reset your account password.
 
@@ -106,19 +114,16 @@ If this was you, please confirm using the link below:
 
 If you did not request this, please review immediately.
 
-This email is part of a security awareness exercise.
+This email is part of a security awareness exercise.``
 
-HTML Tab → paste this:
+
+5. HTML Tab → paste this:
+   
 <html>
   <body style="font-family: Arial;">
     <h2>Password Reset Notice</h2>
-
-    <p>Hello {{.FirstName}},</p>
-
-    <p>
-      A password reset request was initiated for your account.
-    </p>
-
+      <p>Hello {{.FirstName}},</p> 
+    <p> A password reset request was initiated for your account. </p>
     <p>
       <a href="{{.URL}}"
          style="background:#2980b9;color:white;
@@ -127,8 +132,7 @@ HTML Tab → paste this:
         Confirm Reset
       </a>
     </p>
-
-    <p style="font-size:12px;color:gray;">
+ <p style="font-size:12px;color:gray;">
       This is a cybersecurity awareness simulation.
     </p>
   </body>
