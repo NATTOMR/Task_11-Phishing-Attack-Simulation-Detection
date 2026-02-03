@@ -139,8 +139,10 @@ This email is part of a security awareness exercise.``
 
  ✅ Leave Add Tracking Image ON
  👉 Click Save Template
+![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/GoPhish%20Email-Tamplate.png.jpeg)
 
-🔹 STEP 2: Create a NEW Landing Page
+
+#🔹 STEP 2: Create a NEW Landing Page
 
 - Go to Landing Pages
 
@@ -201,7 +203,7 @@ This email is part of a security awareness exercise.``
 
 - Click:
 - 👉 Save Profile
-  ![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/GoPhish%20Email-Tamplate.png.jpeg)
+  
   
 ## 🔹 STEP 3: Create a NEW Campaign
 
