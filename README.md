@@ -142,6 +142,22 @@ This email is part of a security awareness exercise.``
 ![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/GoPhish%20Email-Tamplate.png.jpeg)
 
 
+## ✉️ Phishing Email Template (Simulation)
+### Scenario
+**Theme:** Account Security Alert
+
+**Email Characteristics:**
+- Appears to be from internal IT support
+- Urgent security message
+- Embedded login link
+
+**Intentional Red Flags:**
+- Generic greeting
+- Slight domain mismatch
+- Urgency pressure
+- Suspicious link behavior
+
+
 #🔹 STEP 2: Create a NEW Landing Page
 
 - Go to Landing Pages
@@ -248,10 +264,23 @@ MailHog Lab
 
 - Confirm Launch
 ![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/Campaign.jpeg)
+
+
+### Campaign Configuration
+- Campaign Type: Training Simulation
+- Target: Test email accounts
+- Email Template: Security Alert
+- Landing Page: Fake login page
+- Tracking Enabled:
+  - Email opened
+  - Link clicked
+  - Form submitted
+
+
 ## 🔹 STEP 5: Watch Results
 - Open MailHog
 - http://127.0.0.1:8025
-
+![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/mailHog.jpeg)
   
 ### Supporting Tools
 - Visual Studio Code
@@ -274,25 +303,6 @@ MailHog Lab
 - Authority impersonation
 - Fear of account suspension
 - Generic greetings
-
----
-
-## ✉️ Phishing Email Template (Simulation)
-
-### Scenario
-**Theme:** Account Security Alert
-
-**Email Characteristics:**
-- Appears to be from internal IT support
-- Urgent security message
-- Embedded login link
-
-**Intentional Red Flags:**
-- Generic greeting
-- Slight domain mismatch
-- Urgency pressure
-- Suspicious link behavior
-
 ---
 
 ## 🌐 Landing Page Setup
@@ -313,15 +323,6 @@ Simulate a credential harvesting page **without storing real credentials**.
 
 ## 📤 Sending the Test Phishing Email
 
-### Campaign Configuration
-- Campaign Type: Training Simulation
-- Target: Test email accounts
-- Email Template: Security Alert
-- Landing Page: Fake login page
-- Tracking Enabled:
-  - Email opened
-  - Link clicked
-  - Form submitted
 
 ---
 
