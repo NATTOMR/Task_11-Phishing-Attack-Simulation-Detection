@@ -35,15 +35,13 @@ This project demonstrates a **controlled phishing attack simulation** conducted 
 ## ✅ Step 1: Update Kali Linux
 
 Open a terminal and run:
-
-``bash
 `sudo apt update && sudo apt upgrade -y`
 
 ## 🧠 Step 2: Check System Architecture
 GoPhish depends on your CPU architecture.
 
 `uname -m`
- Expected Output
+ > Expected Output
 
 - ✅ x86_64 → Supported
 
@@ -71,13 +69,13 @@ Enter the GoPhish directory:
 Edit the configuration file:
 `sudo nano config.json`
 
-##🔧 Change Admin Interface to Localhost
+## 🔧 Change Admin Interface to Localhost
 Find:
 
--"listen_url": "0.0.0.0:3333"
+- "listen_url": "0.0.0.0:3333"
 Change it to:
 
--"listen_url": "127.0.0.1:3333"
+- "listen_url": "127.0.0.1:3333"
 
 # After open the Gophish to lanche a phishing attack(lab environment)
 
