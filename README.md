@@ -68,39 +68,42 @@ This project demonstrates a **controlled phishing attack simulation** conducted 
 
 ### ✅ Step 1: Update Kali Linux
 
-```bash
-sudo apt update && sudo apt upgrade -y
-🧠 Step 2: Check System Architecture
-uname -m
+``bash
+`sudo apt update && sudo apt upgrade -y`
+### 🧠 Step 2: Check System Architecture
+`uname -m` <br>
 Expected Output:
 
-✅ x86_64 → Supported
+- ✅ x86_64 → Supported
 
-❌ aarch64 (ARM) → Use an x86_64 VM
+- ❌ aarch64 (ARM) → Use an x86_64 VM
 
-📁 Step 3: Move to /opt Directory
-cd /opt
-📥 Step 4: Download GoPhish
-sudo wget https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip
-📦 Step 5: Extract GoPhish
-sudo unzip gophish-v0.12.1-linux-64bit.zip
-cd gophish
-🔑 Step 6: Make GoPhish Executable
-sudo chmod +x gophish
-⚙️ Step 7: Configure GoPhish
-sudo nano config.json
+### 📁 Step 3: Move to /opt Directory
+`cd /opt`
+### 📥 Step 4: Download GoPhish
+`sudo wget https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip`
+### 📦 Step 5: Extract GoPhish
+`sudo unzip gophish-v0.12.1-linux-64bit.zip` <br>
+`cd gophish`
+### 🔑 Step 6: Make GoPhish Executable
+`sudo chmod +x gophish`
+### ⚙️ Step 7: Configure GoPhish
+`sudo nano config.json`
 Change:
 
-"listen_url": "0.0.0.0:3333"
+- "listen_url": "0.0.0.0:3333"
 To:
 
-"listen_url": "127.0.0.1:3333"
-▶️ Launch GoPhish
-sudo ./gophish
+- "listen_url": "127.0.0.1:3333"
+- 
+## ▶️ Launch GoPhish
+`sudo ./gophish`
 Access the dashboard at:
 
-http://127.0.0.1:3333
+`http://127.0.0.1:3333`
 ![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/GoPhish%20Dashboard.png)
+
+---
 
 ✉️ STEP 1: Create a Phishing Email Template
 Email Template Settings:
