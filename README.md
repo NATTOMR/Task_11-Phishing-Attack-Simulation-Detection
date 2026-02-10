@@ -238,6 +238,7 @@ Role: Cybersecurity Student | SOC Analyst (Aspirant)  |  Blue Team Learner
 --- 
 
 ---
+
 📚 References
 GoPhish Official Documentation
 https://docs.getgophish.com
@@ -250,6 +251,7 @@ https://owasp.org
 
 NIST SP 800-61 – Incident Handling Guide
 https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final
+
 ---
 
 🔒 Disclaimer
