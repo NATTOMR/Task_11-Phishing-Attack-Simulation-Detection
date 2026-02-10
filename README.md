@@ -1,34 +1,50 @@
-<!-- Banner -->
+<!-- ======================= -->
+<!--        BANNER          -->
+<!-- ======================= -->
 <p align="center">
   <img src="images/banner.png" width="1200" height="350" />
 </p>
 
-<!-- Title -->
+<!-- ======================= -->
+<!--         TITLE          -->
+<!-- ======================= -->
 <h1 align="center">Phishing Attack Simulation & Detection Lab</h1>
 
-<!-- Subtitle -->
+<!-- ======================= -->
+<!--        SUBTITLE        -->
+<!-- ======================= -->
 <p align="center">
-  SOC | Email Analysis | Threat Hunting
+  SOC | Email Analysis | Threat Hunting | Security Awareness
 </p>
 
-<!-- Badges -->
+<!-- ======================= -->
+<!--        BADGES          -->
+<!-- ======================= -->
 <p align="center">
   <img src="https://img.shields.io/badge/Security-Awareness-0A3D62?style=for-the-badge&logo=security&logoColor=white" />
   <img src="https://img.shields.io/badge/Phishing-Simulation-B22222?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Tool-GoPhish-0B6623?style=for-the-badge&logoColor=white" />
 </p>
 
+---
+
 ## 📌 Project Overview
 
 Phishing is one of the most common and effective social engineering attacks used to compromise organizations.  
-This project demonstrates a **controlled phishing attack simulation** conducted in a lab environment to understand phishing techniques, analyze user behavior, identify red flags, and document prevention strategies.
+This project demonstrates a **controlled phishing attack simulation** conducted in a **lab environment** to analyze phishing techniques, observe user behavior, identify red flags, and document prevention strategies.
+
+> ⚠️ **Ethical Notice**  
+> This project was performed strictly for **educational and defensive security purposes**.  
+> No real users, credentials, or organizations were targeted.
+
 ---
 
 ## 🎯 Objectives
+
 - Understand how phishing attacks are designed and executed
-- Simulate a phishing campaign in a controlled environment
-- Analyze user interaction and responses
-- Identify common phishing red flags
+- Simulate a phishing campaign in a controlled lab environment
+- Analyze user interaction and response behavior
+- Identify common phishing indicators and red flags
 - Learn phishing prevention and mitigation techniques
 - Improve social engineering awareness
 
@@ -39,79 +55,66 @@ This project demonstrates a **controlled phishing attack simulation** conducted 
 ### Primary Tool
 - **GoPhish** – Open-source phishing simulation framework
 
-## 🛠️ Install GoPhish on Kali Linux (Step by Step)
+### Supporting Tools
+- Kali Linux
+- MailHog (SMTP testing)
+- Visual Studio Code
+- Web Browser
+- Localhost / Virtual Machine environment
+
+---
+
+## 🛠️ Installing GoPhish on Kali Linux
 
 ### ✅ Step 1: Update Kali Linux
 
-- Open a terminal and run: <br>
-`sudo apt update && sudo apt upgrade -y`
+```bash
+sudo apt update && sudo apt upgrade -y
+🧠 Step 2: Check System Architecture
+uname -m
+Expected Output:
 
-###  🧠 Step 2: Check System Architecture
-- GoPhish depends on your CPU architecture. <br>
-`uname -m`
+✅ x86_64 → Supported
 
- ### Expected Output
+❌ aarch64 (ARM) → Use an x86_64 VM
 
-- ✅ x86_64 → Supported
+📁 Step 3: Move to /opt Directory
+cd /opt
+📥 Step 4: Download GoPhish
+sudo wget https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip
+📦 Step 5: Extract GoPhish
+sudo unzip gophish-v0.12.1-linux-64bit.zip
+cd gophish
+🔑 Step 6: Make GoPhish Executable
+sudo chmod +x gophish
+⚙️ Step 7: Configure GoPhish
+sudo nano config.json
+Change:
 
-- ❌ aarch64 (ARM) → Use a VM with x86_64
+"listen_url": "0.0.0.0:3333"
+To:
 
-## 📁 Step 3: Move to /opt Directory
-This is the standard location for third-party security tools.
-`cd /opt`
+"listen_url": "127.0.0.1:3333"
+▶️ Launch GoPhish
+sudo ./gophish
+Access the dashboard at:
 
-## 📥 Step 4: Download GoPhish
-Download the latest Linux 64-bit release:
-
-`sudo wget https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip`
-
-## 📦 Step 5: Extract GoPhish
-`sudo unzip gophish-v0.12.1-linux-64bit.zip`
-
-Enter the GoPhish directory:
-`cd gophish`
-
-## 🔑 Step 6: Make GoPhish Executable
-`sudo chmod +x gophish`
-
-## ⚙️ Step 7: Configure GoPhish (Recommended)
-Edit the configuration file:
-`sudo nano config.json`
-
-## 🔧 Change Admin Interface to Localhost
-Find:
-
-- "listen_url": "0.0.0.0:3333"
-Change it to:
-
-- "listen_url": "127.0.0.1:3333"
-![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/GoPhish%20Dashboard.png)
-# After open the Gophish to lanche a phishing attack(lab environment)
-
-## 🔹 STEP 1: Create a NEW Email Template
-
-- Go to Email Templates
-
-- Click + New Template
-
-- Fill like this:
-
-1. Name -
-
-`Password Reset Simulation – Test 2`
+http://127.0.0.1:3333
 
 
-2. Envelope Sender
+✉️ STEP 1: Create a Phishing Email Template
+Email Template Settings:
 
-`IT Support <it-support@lab.local>`
+Name:
+Password Reset Simulation – Test 2
 
+Envelope Sender:
+IT Support <it-support@lab.local>
 
-3. Subject
+Subject:
+Password Reset Required
 
-`Password Reset Required`
-
-4. Text Tab →
-
+Email Content (Text)
 Hello {{.FirstName}},
 
 We received a request to reset your account password.
@@ -121,299 +124,126 @@ If this was you, please confirm using the link below:
 
 If you did not request this, please review immediately.
 
-This email is part of a security awareness exercise.``
-
-
-5. HTML Tab → paste this:
-   
+This email is part of a security awareness exercise.
+Email Content (HTML)
 <html>
   <body style="font-family: Arial;">
-    <h6>Password Reset Notice</h6>
-      <p>Hello {{.FirstName}},</p> 
-    <p> A password reset request was initiated for your account. </p>
+    <h3>Password Reset Notice</h3>
+    <p>Hello {{.FirstName}},</p>
+    <p>A password reset request was initiated for your account.</p>
     <p>
-      <a href="{{.URL}}"
-         style="background:#2980b9;color:white;
-                padding:10px 16px;text-decoration:none;
-                border-radius:4px;">
+      <a href="{{.URL}}" style="background:#2980b9;color:white;padding:10px 16px;text-decoration:none;border-radius:4px;">
         Confirm Reset
       </a>
     </p>
- <p style="font-size:12px;color:gray;">
+    <p style="font-size:12px;color:gray;">
       This is a cybersecurity awareness simulation.
     </p>
   </body>
 </html>
+✅ Leave Add Tracking Image enabled
+👉 Save Template
 
 
- ✅ Leave Add Tracking Image ON
- 👉 Click Save Template
-![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/GoPhish%20Email-Tamplate.png.jpeg)
 
+🌐 STEP 2: Create a Landing Page
+Name:
+Password Reset Awareness – Test 2
 
-## ✉️ Phishing Email Template (Simulation)
-### Scenario
-**Theme:** Account Security Alert
-
-**Email Characteristics:**
-- Appears to be from internal IT support
-- Urgent security message
-- Embedded login link
-
-**Intentional Red Flags:**
-- Generic greeting
-- Slight domain mismatch
-- Urgency pressure
-- Suspicious link behavior
-
-
-#🔹 STEP 2: Create a NEW Landing Page
-
-- Go to Landing Pages
-
-- Click + New Page
-
-- Name
-`Password Reset Awareness – Test 2`
-
-- Paste this HTML:
 <html>
   <body style="font-family: Arial; text-align:center; margin-top:80px;">
     <h2>Password Reset Simulation</h2>
-    <p>
-      This was a simulated phishing email.
-    </p>
-    <p>
-      Real attackers often use fake password reset messages
-      to steal credentials.
-    </p>
-    <p style="color:green;">
-      Always verify reset requests before clicking links.
-    </p>
+    <p>This was a simulated phishing email.</p>
+    <p>Real attackers often use fake password reset messages to steal credentials.</p>
+    <p style="color:green;">Always verify reset requests before clicking links.</p>
   </body>
 </html>
+❌ Do NOT enable “Capture Submitted Data”
+👉 Save Page
 
 
-- ❌ DO NOT check “Capture Submitted Data”
-- 👉 Click Save Page
-![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/GoPhish%20Landing-Pages.jpeg.png)
-  ## Sending Profile (MailHog)
-  🔸 Name
-`MailHog Lab`
 
-🔸 Interface Type
-`SMTP`
+📧 STEP 3: Configure Sending Profile (MailHog)
+Name: MailHog Lab
 
-🔸 SMTP From
-`alerts@bank-lab.local`
+Interface: SMTP
 
+SMTP From: alerts@bank-lab.local
 
-- (Simple email only — no display name)
+Host: 127.0.0.1:1025
 
-🔸 Host 🚨 MOST IMPORTANT
-`127.0.0.1:1025`
+Username/Password: (leave empty)
 
-🔸 Username
-`(leave empty)`
+✅ Ignore Certificate Errors
 
-🔸 Password
-`(leave empty)`
+🚀 STEP 4: Launch Campaign
+Campaign Name: Password Reset Test – Feb 2026
 
-🔸 Ignore Certificate Errors
+Email Template: Password Reset Simulation – Test 2
 
-✅ Checked
+Landing Page: Password Reset Awareness – Test 2
 
+URL: http://127.0.0.1
 
-🔹 STEP 3: Save the Profile
+Sending Profile: MailHog Lab
 
-- Click:
-- 👉 Save Profile
-  
-  
-## 🔹 STEP 3: Create a NEW Campaign
+Group: Security Awareness Lab – Feb 2026
 
-- Go to Campaigns
 
-- Click + New Campaign
 
-### Fill like this:
+📊 STEP 5: Monitor Results
+MailHog Dashboard:
 
-- Name
+http://127.0.0.1:8025
 
-`Password Reset Test – Feb 2026`
 
+📊 Tracking & Response Analysis
+Metric	Description
+Emails Sent	Total phishing emails
+Emails Opened	User curiosity
+Links Clicked	Phishing susceptibility
+Forms Submitted	High-risk behavior
+🛡️ Prevention & Mitigation
+User Awareness
+Verify sender identity
 
-- Email Template
+Hover over links before clicking
 
-`Password Reset Simulation – Test 2`
+Never share credentials via email
 
+Technical Controls
+SPF, DKIM, DMARC
 
-- Landing Page
+Email filtering
 
-`Password Reset Awareness – Test 2`
+Multi-factor authentication (MFA)
 
+👤 Author
+Name: NATTOMR
+Role: Cybersecurity Student | SOC Analyst (Aspirant)
+Focus Areas:
 
-- URL
+Blue Team Operations
 
-`http://127.0.0.1`
+Phishing Detection
 
+Email Security
 
-- Sending Profile
+Threat Hunting
 
-MailHog Lab
+📚 References
+GoPhish Official Documentation
+https://docs.getgophish.com
 
+MITRE ATT&CK – Phishing (T1566)
+https://attack.mitre.org/techniques/T1566/
 
-## Groups
+OWASP Top 10 – Social Engineering
+https://owasp.org
 
-`Security Awareness Lab – Feb 2026`
+NIST SP 800-61 – Incident Handling Guide
+https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final
 
-## 🔹 STEP 4: Launch 🚀
-
-- Click Launch Campaign
-
-- Confirm Launch
-![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/Campaign.jpeg)
-
-
-### Campaign Configuration
-- Campaign Type: Training Simulation
-- Target: Test email accounts
-- Email Template: Security Alert
-- Landing Page: Fake login page
-- Tracking Enabled:
-  - Email opened
-  - Link clicked
-  - Form submitted
-
-
-## 🔹 STEP 5: Watch Results
-- Open MailHog
-- http://127.0.0.1:8025
-![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/mailHog.jpeg)
-  
-### Supporting Tools
-- Visual Studio Code
-- Web browser
-- Localhost / Virtual Machine environment
-
----
-
-## 📖 Understanding Phishing Attacks
-
-### Common Phishing Techniques
-- Credential harvesting
-- Urgency-based messaging
-- Impersonation (IT, HR, banks)
-- Malicious links
-- Spoofed domains
-
-### Social Engineering Tactics
-- Sense of urgency
-- Authority impersonation
-- Fear of account suspension
-- Generic greetings
----
-
-## 🌐 Landing Page Setup
-
-### Purpose
-Simulate a credential harvesting page **without storing real credentials**.
-
-### Landing Page Behavior
-- Fake login form (username & password fields)
-- Logs submission attempts only
-- Redirects users to a phishing awareness message
-
-### Awareness Message Example
-> “This was a phishing simulation.  
-> Always verify email senders and links before entering credentials.”
-
----
-
-## 📤 Sending the Test Phishing Email
-
-
----
-
-## 📊 Tracking & Response Analysis
-
-### Metrics Collected
-| Metric | Description |
-|------|------------|
-| Emails Sent | Total phishing emails |
-| Emails Opened | User curiosity |
-| Links Clicked | Phishing susceptibility |
-| Forms Submitted | High-risk behavior |
-| Emails Ignored | Security-aware behavior |
-
-### Example Results
-- Emails Sent: 10  
-- Emails Opened: 7  
-- Links Clicked: 4  
-- Forms Submitted: 2  
-
----
-
-## 🚩 Identifying Phishing Red Flags
-
-### Email Indicators
-- Suspicious sender address
-- Grammar and spelling errors
-- Urgent or threatening language
-- Unexpected attachments or links
-
-### Link Indicators
-- URL shortening services
-- Domain mismatches
-- HTTP instead of HTTPS
-
-### Behavioral Indicators
-- Pressure to act quickly
-- Requests for credentials
-- Fear-based messaging
-
----
-
-## 🛡️ Prevention & Mitigation
-
-### User Awareness
-- Verify sender identity
-- Hover over links before clicking
-- Never share credentials via email
-
-### Technical Controls
-- SPF, DKIM, and DMARC implementation
-- Email filtering and sandboxing
-- Multi-factor authentication (MFA)
-
-### Organizational Measures
-- Regular phishing simulations
-- Security awareness training
-- Clear incident reporting procedures
-
----
-
-## 📝 Documentation & Reporting
-
-### Phishing Simulation Report Includes:
-- Project objectives and scope
-- Tools and environment used
-- Campaign setup
-- Results and metrics
-- Risk analysis
-- Security recommendations
-
----
-
-## ✅ Final Outcome
-- Improved understanding of phishing attacks
-- Hands-on experience with phishing detection
-- Awareness of social engineering techniques
-- Practical blue-team defensive skills
-
----
-
-## 🔒 Disclaimer
-This project is for **educational and defensive security purposes only**.
-
-
+🔒 Disclaimer
+This project is for educational and defensive cybersecurity purposes only.
+Any misuse of these techniques outside an authorized lab environment is strictly prohibited.
