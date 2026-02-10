@@ -249,7 +249,8 @@ Role: Cybersecurity Student | SOC Analyst (Aspirant)  |  Blue Team Learner
 
 ---
 
-📚 References
+## 📚 References
+
 GoPhish Official Documentation
 https://docs.getgophish.com
 
