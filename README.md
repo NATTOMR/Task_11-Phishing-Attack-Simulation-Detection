@@ -1,6 +1,6 @@
 <!-- Banner -->
 <p align="center">
-  <img src="images/banner.png" width="100%" />
+  <img src="images/banner.png" width="1200" height="350" />
 </p>
 
 <!-- Title -->
@@ -17,9 +17,6 @@
   <img src="https://img.shields.io/badge/Phishing-Simulation-red?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Tool-Gophish-green?style=for-the-badge" />
 </p>
-
-
-# Phishing-Attack-Simulation-Detection
 
 ## 📌 Project Overview
 
