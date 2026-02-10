@@ -1,4 +1,4 @@
-![Banner](banner.png)
+![Banner](images/banner.png)
 
 ![Security Awareness](https://img.shields.io/badge/Security-Awareness-blue?style=for-the-badge&logo=security&logoColor=white)
 ![Phishing Simulation](https://img.shields.io/badge/Phishing-Simulation-red?style=for-the-badge)
