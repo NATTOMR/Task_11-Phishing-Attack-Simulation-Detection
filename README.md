@@ -404,18 +404,7 @@ Simulate a credential harvesting page **without storing real credentials**.
 
 ---
 
-## 📁 Project Deliverables
-- Phishing simulation report
-- Email and landing page templates
-- Security awareness documentation
-
----
-
-## 📌 Portfolio Summary
-**Phishing Attack Simulation & Detection**  
-Conducted a controlled phishing simulation using GoPhish to analyze user behavior, identify phishing red flags, and document mitigation strategies in a lab environment.
-
----
-
 ## 🔒 Disclaimer
 This project is for **educational and defensive security purposes only**.
+
+
