@@ -105,19 +105,22 @@ Access the dashboard at:
 
 ---
 
+--- 
+
 ✉️ STEP 1: Create a Phishing Email Template
-Email Template Settings:
+- Email Template Settings:
 
-Name:
-Password Reset Simulation – Test 2
+- Name:
+* Password Reset Simulation – Test 2
 
-Envelope Sender:
-IT Support <it-support@lab.local>
+- Envelope Sender:
+`IT Support <it-support@lab.local>`
 
-Subject:
-Password Reset Required
+- Subject:
+  * Password Reset Required
 
-Email Content (Text)
+- Email Content (Text)
+```
 Hello {{.FirstName}},
 
 We received a request to reset your account password.
@@ -144,15 +147,19 @@ Email Content (HTML)
     </p>
   </body>
 </html>
-✅ Leave Add Tracking Image enabled
+```
+---
+---
+## ✅ Leave Add Tracking Image enabled
 👉 Save Template
 
 
 
-🌐 STEP 2: Create a Landing Page
-Name:
-Password Reset Awareness – Test 2
+## 🌐 STEP 2: Create a Landing Page
+- Name:
+  * Password Reset Awareness – Test 2
 
+```
 <html>
   <body style="font-family: Arial; text-align:center; margin-top:80px;">
     <h2>Password Reset Simulation</h2>
@@ -161,79 +168,76 @@ Password Reset Awareness – Test 2
     <p style="color:green;">Always verify reset requests before clicking links.</p>
   </body>
 </html>
-❌ Do NOT enable “Capture Submitted Data”
-👉 Save Page
+``` 
+- ❌ Do NOT enable “Capture Submitted Data”
+- 👉 Save Page
 
 
 
-📧 STEP 3: Configure Sending Profile (MailHog)
-Name: MailHog Lab
+## 📧 STEP 3: Configure Sending Profile (MailHog)
+- Name: MailHog Lab
 
-Interface: SMTP
+- Interface: SMTP
 
-SMTP From: alerts@bank-lab.local
+- SMTP From: alerts@bank-lab.local
 
-Host: 127.0.0.1:1025
+- Host: 127.0.0.1:1025
 
-Username/Password: (leave empty)
+- Username/Password: (leave empty)
 
-✅ Ignore Certificate Errors
+- ✅ Ignore Certificate Errors
+  ---
+  
 
-🚀 STEP 4: Launch Campaign
-Campaign Name: Password Reset Test – Feb 2026
+## 🚀 STEP 4: Launch Campaign
+- Campaign Name: Password Reset Test – Feb 2026
 
-Email Template: Password Reset Simulation – Test 2
+- Email Template: Password Reset Simulation – Test 2
 
-Landing Page: Password Reset Awareness – Test 2
+- Landing Page: Password Reset Awareness – Test 2
 
-URL: http://127.0.0.1
+- URL: http://127.0.0.1
 
-Sending Profile: MailHog Lab
+- Sending Profile: MailHog Lab
 
-Group: Security Awareness Lab – Feb 2026
-
-
-
-📊 STEP 5: Monitor Results
-MailHog Dashboard:
-
-http://127.0.0.1:8025
+- Group: Security Awareness Lab – Feb 2026
 
 
-📊 Tracking & Response Analysis
-Metric	Description
-Emails Sent	Total phishing emails
-Emails Opened	User curiosity
-Links Clicked	Phishing susceptibility
-Forms Submitted	High-risk behavior
-🛡️ Prevention & Mitigation
-User Awareness
-Verify sender identity
 
-Hover over links before clicking
+## 📊 STEP 5: Monitor Results
+ - MailHog Dashboard:
 
-Never share credentials via email
+`http://127.0.0.1:8025`
 
-Technical Controls
-SPF, DKIM, DMARC
 
-Email filtering
+## 📊 Tracking & Response Analysis
+- Metric	Description
+- Emails Sent	Total phishing emails
+- Emails Opened	User curiosity
+- Links Clicked	Phishing susceptibility
+- Forms Submitted	High-risk behavior
+  
+## 🛡️ Prevention & Mitigation
+- User Awareness
+- Verify sender identity
 
-Multi-factor authentication (MFA)
+- Hover over links before clicking
 
-👤 Author
-Name: NATTOMR
-Role: Cybersecurity Student | SOC Analyst (Aspirant)
-Focus Areas:
+- Never share credentials via email
 
-Blue Team Operations
+- Technical Controls
+  * [SPF, DKIM, DMARC]
 
-Phishing Detection
+ - Email filtering
 
-Email Security
+- Multi-factor authentication (MFA)
+ ---
+## 👤 Author
+Name: NATTO MUNI CHAKMA  <br>
+Role: Cybersecurity Student | SOC Analyst (Aspirant)  |  Blue Team Learner
+--- 
 
-Threat Hunting
-
+---
 📚 References
 GoPhish Official Documentation
 https://docs.getgophish.com
@@ -246,6 +250,7 @@ https://owasp.org
 
 NIST SP 800-61 – Incident Handling Guide
 https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final
+---
 
 🔒 Disclaimer
 This project is for educational and defensive cybersecurity purposes only.
