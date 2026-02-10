@@ -68,7 +68,7 @@ This project demonstrates a **controlled phishing attack simulation** conducted 
 
 ### ✅ Step 1: Update Kali Linux
 
-```bash
+``bash
 sudo apt update && sudo apt upgrade -y
 🧠 Step 2: Check System Architecture
 uname -m
@@ -100,7 +100,7 @@ sudo ./gophish
 Access the dashboard at:
 
 http://127.0.0.1:3333
-
+![image]()
 
 ✉️ STEP 1: Create a Phishing Email Template
 Email Template Settings:
