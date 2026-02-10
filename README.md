@@ -1,3 +1,9 @@
+![Banner](banner.png)
+
+![Security Awareness](https://img.shields.io/badge/Security-Awareness-blue?style=for-the-badge&logo=security&logoColor=white)
+![Phishing Simulation](https://img.shields.io/badge/Phishing-Simulation-red?style=for-the-badge)
+![GoPhish](https://img.shields.io/badge/Tool-GoPhish-darkgreen?style=for-the-badge)
+
 # Phishing-Attack-Simulation-Detection
 
 ## 📌 Project Overview
