@@ -98,16 +98,16 @@ To:
 - 
 ## ▶️ Launch GoPhish
 `sudo ./gophish`
-Access the dashboard at:
-
-`http://127.0.0.1:3333`
+- Access the dashboard at:
+  `http://127.0.0.1:3333`
+  
 ![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/GoPhish%20Dashboard.png)
 
 ---
 
 --- 
 
-✉️ STEP 1: Create a Phishing Email Template
+## ✉️ STEP 1: Create a Phishing Email Template
 - Email Template Settings:
 
 - Name:
@@ -149,13 +149,11 @@ Email Content (HTML)
 </html>
 ```
 ![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/GoPhish%20Email-Tamplate.png.jpeg)
+
+- ✅ Leave Add Tracking Image enabled
+- 👉 Save Template
+
 ---
----
-
-## ✅ Leave Add Tracking Image enabled
-👉 Save Template
-
-
 
 ## 🌐 STEP 2: Create a Landing Page
 - Name:
@@ -174,6 +172,9 @@ Email Content (HTML)
 - ❌ Do NOT enable “Capture Submitted Data”
 - 👉 Save Page
 
+![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/GoPhish%20Landing-Pages.jpeg.png)
+
+---
 
 
 ## 📧 STEP 3: Configure Sending Profile (MailHog)
