@@ -1,4 +1,7 @@
-![Banner](images/banner.png)
+<p align="center">
+  <img src="images/banner.png" alt="Banner" width="1200" height="350"/>
+</p>
+
 
 ![Security Awareness](https://img.shields.io/badge/Security-Awareness-blue?style=for-the-badge&logo=security&logoColor=white)
 ![Phishing Simulation](https://img.shields.io/badge/Phishing-Simulation-red?style=for-the-badge)
