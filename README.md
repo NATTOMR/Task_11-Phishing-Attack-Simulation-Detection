@@ -1,12 +1,23 @@
+<!-- Banner -->
 <p align="center">
-  <img src="images/banner.png" alt="Phishing Lab Banner" width="1200" height="350"/>
+  <img src="images/banner.png" width="100%" />
 </p>
 
+<!-- Title -->
+<h1 align="center">Phishing Attack Simulation & Detection Lab</h1>
+
+<!-- Subtitle -->
 <p align="center">
-  <img src="https://img.shields.io/badge/Security-Awareness-blue" />
-  <img src="https://img.shields.io/badge/Phishing-Simulation-red" />
-  <img src="https://img.shields.io/badge/Tool-Gophish-green" />
+  SOC | Email Analysis | Threat Hunting
 </p>
+
+<!-- Badges -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Security-Awareness-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Phishing-Simulation-red?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Tool-Gophish-green?style=for-the-badge" />
+</p>
+
 
 # Phishing-Attack-Simulation-Detection
 
