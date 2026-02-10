@@ -13,9 +13,7 @@
 
 <!-- Badges -->
 <p align="center">
-  <img src="https://img.shields.io/badge/Security-Awareness-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Phishing-Simulation-red?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Tool-Gophish-green?style=for-the-badge" />
+ ![Security Awareness Project](https://img.shields.io/badge/Security-Awareness%20Project-0A3D62?style=for-the-badge)
 </p>
 
 ## 📌 Project Overview
