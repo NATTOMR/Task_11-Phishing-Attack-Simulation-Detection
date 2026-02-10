@@ -1,11 +1,12 @@
 <p align="center">
-  <img src="images/banner.png" alt="Banner" width="1200" height="350"/>
+  <img src="images/banner.png" alt="Phishing Lab Banner" width="1200" height="350"/>
 </p>
 
-
-![Security Awareness](https://img.shields.io/badge/Security-Awareness-blue?style=for-the-badge&logo=security&logoColor=white)
-![Phishing Simulation](https://img.shields.io/badge/Phishing-Simulation-red?style=for-the-badge)
-![GoPhish](https://img.shields.io/badge/Tool-GoPhish-darkgreen?style=for-the-badge)
+<p align="center">
+  <img src="https://img.shields.io/badge/Security-Awareness-blue" />
+  <img src="https://img.shields.io/badge/Phishing-Simulation-red" />
+  <img src="https://img.shields.io/badge/Tool-Gophish-green" />
+</p>
 
 # Phishing-Attack-Simulation-Detection
 
