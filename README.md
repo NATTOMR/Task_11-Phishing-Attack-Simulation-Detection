@@ -1,6 +1,7 @@
 # Phishing-Attack-Simulation-Detection
 
 ## 📌 Project Overview
+
 Phishing is one of the most common and effective social engineering attacks used to compromise organizations.  
 This project demonstrates a **controlled phishing attack simulation** conducted in a lab environment to understand phishing techniques, analyze user behavior, identify red flags, and document prevention strategies.
 ---
