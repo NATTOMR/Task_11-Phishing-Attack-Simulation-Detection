@@ -1,4 +1,4 @@
-# Task_11-Phishing-Attack-Simulation-Detection
+# Phishing-Attack-Simulation-Detection
 
 ## 📌 Project Overview
 Phishing is one of the most common and effective social engineering attacks used to compromise organizations.  
