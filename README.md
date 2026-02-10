@@ -148,8 +148,10 @@ Email Content (HTML)
   </body>
 </html>
 ```
+![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/GoPhish%20Email-Tamplate.png.jpeg)
 ---
 ---
+
 ## ✅ Leave Add Tracking Image enabled
 👉 Save Template
 
