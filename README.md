@@ -189,8 +189,11 @@ Email Content (HTML)
 - Username/Password: (leave empty)
 
 - ✅ Ignore Certificate Errors
-  ---
+
+  ![image](https://github.com/NATTOMR/Task_11-Phishing-Attack-Simulation-Detection/blob/main/images/Gophish%20Sending%20profile.png)
   
+---  
+
 
 ## 🚀 STEP 4: Launch Campaign
 - Campaign Name: Password Reset Test – Feb 2026
@@ -234,10 +237,14 @@ Email Content (HTML)
  - Email filtering
 
 - Multi-factor authentication (MFA)
+  
  ---
+
+ 
 ## 👤 Author
 Name: NATTO MUNI CHAKMA  <br>
 Role: Cybersecurity Student | SOC Analyst (Aspirant)  |  Blue Team Learner
+
 --- 
 
 ---
