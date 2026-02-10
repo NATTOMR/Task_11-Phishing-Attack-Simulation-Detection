@@ -245,8 +245,6 @@ Email Content (HTML)
 Name: NATTO MUNI CHAKMA  <br>
 Role: Cybersecurity Student | SOC Analyst (Aspirant)  |  Blue Team Learner
 
---- 
-
 ---
 
 ## 📚 References
